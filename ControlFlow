@@ -1,0 +1,28 @@
+//This is just a simple example of flow control
+//We can do that with if/else statement, by defining boolean variables or by switch statement
+
+import java.util.*;
+
+
+public class ControlFlow {
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		
+		System.out.println("Are you hungry?\n");
+		String answer = input.nextLine();
+		input.close();
+		if(answer.contentEquals("yes"))
+			/*contentEquals() method was called to compare the value in the answer variable
+			 * We can check that by calling .equals() method too
+			 * in that case the syntax will be "yes".equals(answer)
+			 * Or we can do this if(input.nextLine().contains("yes") to compare the charSequence */
+		{
+			System.out.println("if statement ran. \n");
+			System.out.println("Food is on the table!");
+		}else {
+			System.out.println("Not hungry!\n");
+		}
+			
+	}
